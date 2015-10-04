@@ -44,6 +44,27 @@ header {
 	text-align: center;
 }
 
+.timeline-entry {
+	width:50%;
+	margin: 0 auto;
+}
+
+.timeline-entry {
+	border:1px solid black;
+}
+
+.timeline-entry .container {
+	text-align: center;
+	margin:0 auto;
+} 
+
+.timeline-entry li {
+}
+.timeline-entry ul {
+}
+
+
+
 @media screen and (max-width: 1200px) {
 header {
 	font-size:25px;
