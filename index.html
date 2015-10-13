@@ -13,9 +13,13 @@
 <script>
 
 $(document).ready(function(e) { // do not delete this line
-	$('header').hide();
-	$('header').fadeIn(3000)
-
+	$('.container h1').hide();
+	$('.container h1').fadeIn(3000)
+  $('btn-scroll').click(function(e) {
+    e.preventDefault(); //needed otherwise page reloads before scrolling
+    var target = $( $(this).attr('href') ).position().top; //gets the position (in pixels) of the target from the top of the page
+    $('html,body').stop().animate({ scrollTop: target }, { duration: 900 })
+  });
 //Plugin dependency
 	$('.cntl').cntl({
 // The amount of "scroll padding" to allow 
@@ -26,6 +30,8 @@ $(document).ready(function(e) { // do not delete this line
 	anim_class: 'cntl-animate',
 // A callback once the state has been revealed
 	onreveal: null
+
+
 
 });
 
@@ -45,8 +51,10 @@ $(document).ready(function(e) { // do not delete this line
 </nav>
 
 <header>
-	<h1>The future</h1>
-	<a href='#' class="btn-scroll"><img src="img/arrow.png"></a>
+  <div class="container">
+	   <h1>The future</h1>
+	   <a href="file:///Users/mac/GitHub/futuretimeline/index.html#2015" class="btn-scroll"><img src="img/arrow.png"></a>
+  </div>
 </header>
 
 
