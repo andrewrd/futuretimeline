@@ -6,12 +6,29 @@
 <link rel="stylesheet" href="css/style.css">
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
 <script src="js/jquery-1.11.3.min.js"></script>
+<!-- Timeline plugin dependencies http://www.jqueryscript.net/other/Responsive-Vertical-Timeline-With-jQuery-CSS3.html -->
+<link rel="stylesheet" href="css/cntl.css">
+<script src="js/jquery.cntl.js"></script>
+
 <script>
 
-$(document).ready(function() { // do not delete this line
+$(document).ready(function(e) { // do not delete this line
 	$('header').hide();
 	$('header').fadeIn(3000)
-	
+
+//Plugin dependency
+	$('.cntl').cntl({
+// The amount of "scroll padding" to allow 
+// The more, the later the state will be revealed
+	revealbefore: 250,
+// The animate class
+// This class should have animation rules in css
+	anim_class: 'cntl-animate',
+// A callback once the state has been revealed
+	onreveal: null
+
+});
+
 
 }); // do not delete this line
 </script>
@@ -33,21 +50,46 @@ $(document).ready(function() { // do not delete this line
 
 
 <section>
+<div class="cntl">
 
-	<div class="timeline-entry">
-		<div id="2001">
-			<div class="container">
-				<h1>2015</h1>
-				<ul>
-				<li>Timeline is created</li>
-				</ul>
-			</div>	
-		</div>
-	</div>
+  <span class="cntl-bar cntl-center">
+    <span class="cntl-bar-fill"></span>
+  </span>
+
+  <div class="cntl-states">
+
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h4>Event 1</h4>
+        <p>Description 1.</p>
+      </div>
+      <div class="cntl-icon cntl-center">2015</div>
+    </div>
+
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h4>Event 2</h4>
+        <p>Description 2.</p>
+      </div>
+      <div class="cntl-icon cntl-center">2025</div>
+    </div> 
+    
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h4>Event 3</h4>
+        <p>Description 3.</p>
+      </div>
+      <div class="cntl-icon cntl-center">2035</div>
+    </div>
 
 
+  </div>
 
+</div>
 </section>
 
+<footer>
+	<p> Andrew Rasheed's Major project MAS241</p>
+</footer>
 </body>
 </html>

@@ -6,14 +6,14 @@ html, body {
 }
 
 nav {
-	top:0;
+	top:0px;
 	padding:10px;
 	margin:0;
  	color:white;
  	background:black;
  	background-size: cover;
  	width:100%;
- 	position:fixed;
+ 	position:absolute;
 }
 
 #navbar {
@@ -41,28 +41,12 @@ header {
 .btn-scroll img {
 	width:80px;
 	height:80px;
-	text-align: center;
-}
-
-.timeline-entry {
-	width:50%;
-	margin: 0 auto;
-}
-
-.timeline-entry {
-	border:1px solid black;
-}
-
-.timeline-entry .container {
-	text-align: center;
 	margin:0 auto;
-} 
-
-.timeline-entry li {
-}
-.timeline-entry ul {
 }
 
+footer {
+	color:blue;
+}
 
 
 @media screen and (max-width: 1200px) {

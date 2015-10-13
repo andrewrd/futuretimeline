@@ -14,6 +14,7 @@ nav {
  	background-size: cover;
  	width:100%;
  	position:fixed;
+ 	z-index: 1;
 }
 
 #navbar {
@@ -44,25 +45,8 @@ header {
 	text-align: center;
 }
 
-.timeline-entry {
-	width:50%;
-	margin: 0 auto;
-}
-
-.timeline-entry {
-	border:1px solid black;
-}
-
-.timeline-entry .container {
-	margin:0 auto;
-} 
-
-.timeline-entry li {
-	list-style-type: none;
-	margin: 0 auto;
-}
-.timeline-entry ul {
-	list-style-type: none;
+footer {
+	text-align: center;
 }
 
 
