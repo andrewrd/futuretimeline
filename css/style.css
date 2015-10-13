@@ -10,7 +10,7 @@ nav {
 	padding:10px;
 	margin:0;
  	color:white;
- 	background:black;
+ 	background:#000000 ;
  	background-size: cover;
  	width:100%;
  	position:fixed;
@@ -28,11 +28,11 @@ nav {
 	margin-right: 20px;
 }
 header {
+	background:url(img/bg.jpg) no-repeat center center fixed;
 	margin:200px;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 50px;
-
 }
 
 .btn-scroll {
