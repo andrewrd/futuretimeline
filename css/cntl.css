@@ -4,6 +4,8 @@ body {
 
 
 .cntl {
+		background:url(img/bg.jpg) no-repeat center center fixed;
+
 	position: relative;
 	width: 100%;
 	overflow: hidden;

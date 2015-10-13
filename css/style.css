@@ -11,7 +11,6 @@ nav {
 	margin:0;
  	color:white;
  	background:#000000 ;
- 	background-size: cover;
  	width:100%;
  	position:fixed;
  	z-index: 1;
@@ -28,11 +27,12 @@ nav {
 	margin-right: 20px;
 }
 header {
-	background:url(img/bg.jpg) no-repeat center center fixed;
 	margin:200px;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 50px;
+	background:url("../img/bg.jpg") no-repeat center center fixed;
+
 }
 
 .btn-scroll {
