@@ -26,6 +26,18 @@ $(document).ready(function(e) { // do not delete this line
       })
   });
 
+ $(window).scroll(function(e){
+    // here the bar is id'ed myBar
+    if ($(this).scrollTop() > 30) { // choose the value you want.
+            $('nav').css({"padding" : "10px", "background" : "#000000"});
+            $('#logo').css({"font-size" : "18px"});
+    } else {
+        $('nav').css({"background" : "transparent", "padding":"30px"});
+        $('#logo').css({"font-size" : "22px"});
+    }
+});
+
+
 //Plugin dependency
 	$('.cntl').cntl({
 // The amount of "scroll padding" to allow 
@@ -37,8 +49,6 @@ $(document).ready(function(e) { // do not delete this line
 // A callback once the state has been revealed
 	onreveal: null
 
-
-
 });
 
 
@@ -48,12 +58,14 @@ $(document).ready(function(e) { // do not delete this line
 <body>
 
 <nav>
-	<ul id="navbar">
-		<li><a href="">The Future Timeline</a></li>
-		<li>Years V</li>
-		<li>About</li>
-		<li>Contact</li>
-	</ul>
+  <div id="nav-wrapper">
+	 <ul id="navbar">
+		  <li id="logo">The Future Timeline</li>
+		  <li><a href="">Years V</a></li>
+		  <li><a href="">About</a></li>
+		  <li><a href="">Contact</a></li>
+	 </ul>
+ </div>
 </nav>
 
 <header>
