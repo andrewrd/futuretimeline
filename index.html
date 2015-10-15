@@ -15,11 +15,17 @@
 $(document).ready(function(e) { // do not delete this line
 	$('.container h1').hide();
 	$('.container h1').fadeIn(3000)
-  $('btn-scroll').click(function(e) {
+  $('html a').click(function(e) {
     e.preventDefault(); //needed otherwise page reloads before scrolling
     var target = $( $(this).attr('href') ).position().top; //gets the position (in pixels) of the target from the top of the page
-    $('html,body').stop().animate({ scrollTop: target }, { duration: 900 })
+    $('html,body').stop().animate({ 
+        scrollTop: target 
+      }, 
+      { 
+        duration: 900 
+      })
   });
+
 //Plugin dependency
 	$('.cntl').cntl({
 // The amount of "scroll padding" to allow 
@@ -43,7 +49,7 @@ $(document).ready(function(e) { // do not delete this line
 
 <nav>
 	<ul id="navbar">
-		<li>The Future Timeline</li>
+		<li><a href="">The Future Timeline</a></li>
 		<li>Years V</li>
 		<li>About</li>
 		<li>Contact</li>
@@ -53,21 +59,24 @@ $(document).ready(function(e) { // do not delete this line
 <header>
   <div class="container">
 	   <h1>The future</h1>
-	   <a href="file:///Users/mac/GitHub/futuretimeline/index.html#2015" class="btn-scroll"><img src="img/arrow.png"></a>
+	   <a href="article" class="btn-scroll"><img src="img/arrow.png"></a>
   </div>
 </header>
 
-
+<article>
+  <div class="container">
+  <h1> The near future </h1>
+</div>
+</article>
 <section>
 <div class="cntl">
-
   <span class="cntl-bar cntl-center">
     <span class="cntl-bar-fill"></span>
   </span>
 
   <div class="cntl-states">
 
-    <div class="cntl-state">
+    <div id="2015" class="cntl-state">
       <div class="cntl-content">
         <h4>Event 1</h4>
         <p>Description 1.</p>
@@ -91,6 +100,13 @@ $(document).ready(function(e) { // do not delete this line
       <div class="cntl-icon cntl-center">2035</div>
     </div>
 
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h4>Event 3</h4>
+        <p>Description 3.</p>
+      </div>
+      <div class="cntl-icon cntl-center">2035</div>
+    </div>
 
   </div>
 
