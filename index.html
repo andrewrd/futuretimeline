@@ -29,10 +29,12 @@ $(document).ready(function(e) { // do not delete this line
  $(window).scroll(function(e){
     // here the bar is id'ed myBar
     if ($(this).scrollTop() > 30) { // choose the value you want.
-            $('nav').css({"padding" : "10px", "background" : "#000000"});
+            $('nav').stop().animate({"padding" : "10px"});
+            $('nav').css({"background" : "#000000"});
             $('#logo').css({"font-size" : "18px"});
     } else {
-        $('nav').css({"background" : "transparent", "padding":"30px"});
+        $('nav').stop().animate({"padding":"30px"});
+        $('nav').css({"background" : "transparent"});
         $('#logo').css({"font-size" : "22px"});
     }
 });
