@@ -15,17 +15,19 @@
 $(document).ready(function(e) { // do not delete this line
 	$('.container h1').hide();
 	$('.container h1').fadeIn(3000)
-  $('html a').click(function(e) {
+
+  $('header a').click(function(e) {
     e.preventDefault(); //needed otherwise page reloads before scrolling
     var target = $( $(this).attr('href') ).position().top; //gets the position (in pixels) of the target from the top of the page
     $('html,body').stop().animate({ 
         scrollTop: target 
       }, 
       { 
-        duration: 900 
+        duration: 1000 
       })
   });
 
+// This animates the navigation bar. If the user scrolls below 30px, ab animation is triggered. 
  $(window).scroll(function(e){
     // here the bar is id'ed myBar
     if ($(this).scrollTop() > 30) { // choose the value you want.
@@ -38,6 +40,9 @@ $(document).ready(function(e) { // do not delete this line
         $('#logo').css({"font-size" : "22px"});
     }
 });
+
+
+
 
 
 //Plugin dependency
@@ -78,12 +83,14 @@ $(document).ready(function(e) { // do not delete this line
 </header>
 
 <article>
-  <div class="container">
-  <h1> The near future </h1>
-</div>
+  <h1> What's in store for humanity? </h1>
+  <p> The near future is long and daunting. One could argue that humanity
+    no longer has a future considering it's long track record of destruction 
+    and war, but this timeline should serve to give an idea of what's to come.</p>
 </article>
-<section>
-<div class="cntl">
+
+<div id="timeline-one">
+  <div class="cntl">
   <span class="cntl-bar cntl-center">
     <span class="cntl-bar-fill"></span>
   </span>
@@ -121,11 +128,69 @@ $(document).ready(function(e) { // do not delete this line
       </div>
       <div class="cntl-icon cntl-center">2035</div>
     </div>
-
   </div>
+</div>
+</div>
 
+<section>
+  <div class="container">
+  <h1> What's next? </h1>
 </div>
 </section>
+
+<div id="timeline-two">
+  <div class="cntl">
+  <span class="cntl-bar cntl-center">
+    <span class="cntl-bar-fill"></span>
+  </span>
+
+  <div class="cntl-states">
+
+    <div id="2015" class="cntl-state">
+      <div class="cntl-content">
+        <h4>Event 1</h4>
+        <p>Description 1.</p>
+      </div>
+      <div class="cntl-icon cntl-center">2015</div>
+    </div>
+
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h4>Event 2</h4>
+        <p>Description 2.</p>
+      </div>
+      <div class="cntl-icon cntl-center">2025</div>
+    </div> 
+    
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h4>Event 3</h4>
+        <p>Description 3.</p>
+      </div>
+      <div class="cntl-icon cntl-center">2035</div>
+    </div>
+
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h4>Event 3</h4>
+        <p>Description 3.</p>
+      </div>
+      <div class="cntl-icon cntl-center">2035</div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<article>
+  <h1> What's next for humanity? </h1>
+  <p> "The further we get, the more we can only speculate"</p>
+</article>
+
+<div id="timeline-three">
+  <video width="320" height="240 controls">
+    <video src="movie.mp4" type="video/mp4">
+  </video>
+</div>
 
 <footer>
 	<p> Andrew Rasheed's Major project MAS241</p>
