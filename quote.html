@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>The Future Timeline</title>
+<link rel="stylesheet" href="css/style.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+
+$(document).ready(function(e) { // do not delete this line
+	$('.container h3').hide();
+	$('.container h3').fadeIn(2000)
+
+// This animates the navigation bar. If the user scrolls below 30px, ab animation is triggered. 
+ $(window).scroll(function(e){
+    // here the bar is id'ed myBar
+    if ($(this).scrollTop() > 30) { // choose the value you want.
+            $('nav').stop().animate({"padding" : "10px"});
+            $('nav').css({"background" : "#000000"});
+            $('#logo').css({"font-size" : "18px"});
+    } else {
+        $('nav').stop().animate({"padding":"30px"});
+        $('nav').css({"background" : "transparent"});
+        $('#logo').css({"font-size" : "22px"});
+    }
+  });
+
+//This generates the quote
+  var arr =["<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew"];
+
+    $('.btn-q a').click(function(e) {
+	     $('#quote').hide().html(arr[Math.floor((Math.random() * 10)+1)]).fadeIn(800);
+       $('.btn-q a').hide().fadeIn(800)
+  }); 
+
+}); // do not delete this line
+
+</script>
+</head>
+<body>
+
+<nav>
+  <div id="nav-wrapper">
+	 <ul id="navbar">
+		  <li class="logo">The Future Timeline</li>
+		  <li><a href="index.html">Years V</a></li>
+		  <li><a href="">About</a></li>
+		  <li><a href="">Contact</a></li>
+      <li><a href="">Quotes for the future</a></li>
+	 </ul>
+ </div>
+</nav>
+
+<header>
+  <div class="container">
+	   <h3 id="quote">"If I had a quote, it'd be amazing" <br> - Andrew Rasheed </h3>
+     <div class="btn-q">
+	   <a href="#">Get a quote</a>
+     </div>
+  </div>
+</header>
+</body>
+</html>
