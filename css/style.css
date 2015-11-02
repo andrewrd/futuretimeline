@@ -61,7 +61,7 @@ header {
 	color: #FFFFFF;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 60px;
+	font-size: 80px;
 }
 /* Quote button */
 
@@ -127,6 +127,15 @@ header {
 }
 
 #timeline-three {
+		background:url("../img/timeline-one.jpg") no-repeat center center fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	z-index:0;
+}
+
+#timeline-four {
 	margin: 0 auto;
 	text-align: center;
 }
@@ -144,6 +153,7 @@ article {
 	padding:50px;
 	text-align: center;
 	line-height: 30px;
+	font-size: 20px;
 }
 
 footer {
@@ -170,20 +180,25 @@ footer {
 }
 #navbar li{
 	margin:0;
-	display:none;
-}
-.nav-mobile {
-	display:block;       
-}
 }
 
-/* Fix these fonts 
-@font-face {
-    font-family: "BTTF";
-    src: url("fonts/bttf.ttf") format("truetype");
 }
-{ 
-    font-family: "bttf", Verdana, Tahoma;
+
+/*
+#navbar ul{
+	visibility:hidden;
+}
+#navbar ul li {
+	display:block;
+	float:none;
+}
+
+#navbar li ul li a:link, #navbar li ul li a:visited {
+	background-color:#09F;
+}
+
+#navbar li ul li a:hover {
+	background-color:#0CF;	
 }
 */
 

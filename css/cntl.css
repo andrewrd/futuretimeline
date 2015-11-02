@@ -3,8 +3,10 @@ body {
 }
 
 /* .cntl is customised to fit the page, particularly the z-index. 
-	The percentage code in particular is done for the page to be responsive
-	mainly by the plugin */
+Notes:
+	- The percentage code in particular is done for the page to be responsive
+	mainly by the plugin 
+*/
 .cntl {
 	padding-top: 50px;
 	position: relative;
@@ -166,4 +168,9 @@ animations
 		right: 0;
 	}
 
+}
+
+
+#navbar ul {
+	display:inline;
 }

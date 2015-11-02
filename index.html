@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="css/style.css">
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
 <script src="js/jquery-1.11.3.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="img/time-favicon.png"/>
 <!-- Timeline plugin dependencies http://www.jqueryscript.net/other/Responsive-Vertical-Timeline-With-jQuery-CSS3.html -->
 <link rel="stylesheet" href="css/cntl.css">
 <script src="js/jquery.cntl.js"></script>
@@ -27,6 +28,17 @@ $(document).ready(function(e) { // do not delete this line
       })
   });
 
+  $('.scroll a').click(function(e) {
+    e.preventDefault(); //needed otherwise page reloads before scrolling
+    var ob = $( $(this).attr('href') ).offset().top ; //gets the position (in pixels) of the target from the top of the page
+    $('html,body').stop().animate({ 
+        scrollTop: ob
+      }, 
+      { 
+        duration: 800 
+      })
+  });
+
 // This animates the navigation bar. If the user scrolls below 30px, ab animation is triggered. 
  $(window).scroll(function(e){
     // here the bar is id'ed myBar
@@ -40,10 +52,6 @@ $(document).ready(function(e) { // do not delete this line
         $('#logo').css({"font-size" : "22px"});
     }
 });
-
-$('#page-wrapper').hide();
-
-
 
 //Plugin dependency
 	$('.cntl').cntl({
@@ -65,23 +73,14 @@ $('#page-wrapper').hide();
 <body>
 
 <nav>
+
   <div id="nav-wrapper">
 	 <ul id="navbar">
-		  <li class="logo">The Future Timeline</li>
-		  <li><a href="">Years V</a></li>
-		  <li><a href="">About</a></li>
-		  <li><a href="">Contact</a></li>
+		  <li class="logo"><a href="">The Future Timeline</a></li>
+		  <li class="scroll"><a href="#timeline-one">Years V</a></li>
+		  <li class="scroll"><a href="">Contact</a></li>
       <li><a href="quote.html">Quotes for the future</a></li>
 	 </ul>
-
-   <ul class="nav-mobile">
-    <button>Toggle</button>
-      <li>The Future Timeline</li>
-      <li>Years V</li>
-      <li>About</li>
-      <li>Contact</li>
-   </ul>
- </div>
 </nav>
 
 <header>
@@ -106,15 +105,16 @@ $('#page-wrapper').hide();
 
   <div class="cntl-states">
 
-    <div id="2015" class="cntl-state">
+    <div class="cntl-state">
       <div class="cntl-content">
-        <h1>The 2020's</h1>
-        <p> In the 2020's we will be in a period of large scale change. We will reach our tipping point in terms of oil and the economy and the world as we know will be forced to shift towards renewable energy.</p>
+        <h1>2020s</h1>
+        <p> In the 2020s we will be in a period of large-scale change. We will reach our tipping point in terms of oil and the economy and the world as we know will be forced to begin it’s shift towards renewable energy.</p>
         <p>Other notable events include:</p>
         <ul>
-          <li>Generation X(1960 - 1980's) reshapes global politics through their more liberal ideals. </li>
-          <li>2020-2025 - Five-year survival rates for Hodgkin's lymphoma are approaching 100%<br><img src="img/timeline/2020hodge.jpg" width="300" height="300" alt="Graph showing increase in survival rates over time"></li>
-          <li>Internet use reaches 5 billion worldwide due to increase in accessibility and affordability</li>
+          <li>Self driving cars will begin adoption on a global scale due to a push from well known car manufacturers.</li>
+          <li>Generation X reshapes global politics through their more liberal ideals.</li>
+          <li>Illness and various diseases such as cancer have become reduced at a faster rate due to advancements in research & technology. Cancers such as Hodgkin’s lymphoma survival rates are now approaching 100%.</li>
+          <li>Internet use accessibility and affordability is greatly improved allowing for Internet use to reach 5 billion users around the globe.</li>
         </ul>
       </div>
       <div class="cntl-icon cntl-center">2020</div>
@@ -122,22 +122,20 @@ $('#page-wrapper').hide();
 
     <div class="cntl-state">
       <div class="cntl-content">
-        <h1>The 2030's</h1>
-        <p> The 2030's will be a decade of futuristic change. The global population will be reaching it's tipping point with an addition 2 billion people living on earth.</p>
+        <h1>2030s</h1>
+        <p> The 2030s will be a decade of adjustments and technological innovation. The worldwide population will have increased to an additional 2 billion people living on earth.</p>
         <p> Other notable changes include: </p>
         <ul>
-          <li> Desalination has exploded in use</li>
-          <li> AI is widespread <br> <img src="img/timeline/2030ai.jpg" width="300" height="300"></li>
-          <li> The majority of new vehicles are plug-in electric, or hybrids </li>
+          <li> A major shift in agriculture has occurred; the way we grow and raise cattle has changed to a more genetically enhanced method to account for population growth.</li>
+          <li> Artificial Intelligence is widespread, rather than one centralised AI, countless amounts of small AI effective control their own specialised domains.</li>
+          <li>• The majority of new vehicles are either plug-in electric or hybrids, all of which are self-driven and autonomous. A shift from oil has begun and roads have become a safer place. <br> <img src="img/timeline/2030-cars.jpg" width="300" height="300"> </li>
           <li> Emerging job titles of today
               <ul>
-                <li>'New Science' Ethicist</li>
-                <li>Waste Data Handler</li>
-                <li>Vertical Farmer</li>
-                <li>Nano Medic</li>
-                <li>Virtual Teacher</li>
-                <li>Body Part Maker</li>
+                <li>Social media officer</li>
+                <li>Virtual ethics teacher</li>
+                <li>Autonomous car mechanic</li>
               </ul>
+          <li>Digital currency is slowly gaining traction.</li>
           </li>
         </ul>
       </div>
@@ -147,23 +145,14 @@ $('#page-wrapper').hide();
     
     <div class="cntl-state">
       <div class="cntl-content">
-                <h1>The 2030's</h1>
-        <p> The 2030's will be a decade of futuristic change. The global population will be reaching it's tipping point with an addition 2million people living on earth.</p>
+        <h1>2040s</h1>
+        <p> The decade of the 2040s show a change in global power, India and China’s influence on culture and society rivals that of the USA. As well as this technology has shifted towards a focus on biometric modifications such as sensory enhancements. </p>
         <p> Other notable changes include: </p>
         <ul>
-          <li> Desalination has exploded in use</li>
-          <li> AI is widespread <br> <img src="img/timeline/2030ai.jpg" width="300" height="300"></li>
-          <li> The majority of new vehicles are plug-in electric, or hybrids </li>
-          <li> Emerging job titles of today
-              <ul>
-                <li>'New Science' Ethicist</li>
-                <li>Waste Data Handler</li>
-                <li>Vertical Farmer</li>
-                <li>Nano Medic</li>
-                <li>Virtual Teacher</li>
-                <li>Body Part Maker</li>
-              </ul>
-          </li>
+          <li> Telecommuting has become a very common method of travelling to work.</li>
+          <li> Virtual currency is now replacing normal currency <br> <img class="img-t" src="img/timeline/2040-money.jpg" width="300" height="200"></li>
+          <li> Healthcare has advanced to such an extent where cancer rates and various other forms of disease have dropped dramatically. As a result human life span has increased significantly worldwide to a minimum of 90. </li>
+          <li> The worlds animal and plant life have declined as a result of global warming, major extinctions have occurred on many of the world’s species.</li>
         </ul>
       </div>
       <div class="cntl-icon cntl-center">2040</div>
@@ -171,23 +160,15 @@ $('#page-wrapper').hide();
 
     <div class="cntl-state">
       <div class="cntl-content">
-        <h1>The 2030's</h1>
-        <p> The 2030's will be a decade of futuristic change. The global population will be reaching it's tipping point with an addition 2million people living on earth.</p>
+        <h1>2050s</h1>
+        <p> In this decade the world population has reached 10billion people. The overpopulation of the world has contributed to advancements in housing, agriculture and become the catylst in society's move away from capitalism. </p>
         <p> Other notable changes include: </p>
         <ul>
-          <li> Desalination has exploded in use</li>
-          <li> AI is widespread <br> <img src="img/timeline/2030ai.jpg" width="300" height="300"></li>
-          <li> The majority of new vehicles are plug-in electric, or hybrids </li>
-          <li> Emerging job titles of today
-              <ul>
-                <li>'New Science' Ethicist</li>
-                <li>Waste Data Handler</li>
-                <li>Vertical Farmer</li>
-                <li>Nano Medic</li>
-                <li>Virtual Teacher</li>
-                <li>Body Part Maker</li>
-              </ul>
-          </li>
+          <li> Due to advancements in artifical intelligence, Moores law has allowed the average computer to be as powerful as the entire human population.</li>
+          <li> Oil has been completely abandoned in favor of renewable and cleaner energy alternatives.</li>
+          <li> Space travel is becoming an increasingly simpler endeavor with humans now occupying mars and the moon.</li>
+          <li> Food has become free due to advancements in agriculture and technology.</li>
+          <li> The capitalistic society in which the world is based is falling apart due to the rapid movement of technology and automation causing a percentage of unemployment (60%).</li>       
         </ul>
       </div>
       <div class="cntl-icon cntl-center">2050</div>
@@ -210,34 +191,55 @@ $('#page-wrapper').hide();
 
   <div class="cntl-states">
 
-    <div id="2015" class="cntl-state">
+    <div class="cntl-state">
       <div class="cntl-content">
-        <h4>Event 1</h4>
-        <p>Description 1.</p>
+        <h1>2060s</h1>
+        <p>The world has become a heavily technology reliant place. Technology has gradually shifted the world’s perception on work and culture due to automation.</p>
+        <p>Other events include:</p>
+        <ul>
+          <li>A shift away from traditional employment has occured due to widespread protest in the 2050s rendering most jobs redundant.</li>
+          <li>Renewable energy is becoming increasingly efficient.</li>
+          <li>The Internet has become a virtual world in which a percentage of the population inhabit and live a large amount of their lives.</li>
+          <li>Australian population reaches 42million</li>
+        </ul>
       </div>
-      <div class="cntl-icon cntl-center">2015</div>
+      <div class="cntl-icon cntl-center">2060</div>
     </div>
 
     <div class="cntl-state">
       <div class="cntl-content">
-        <h4>Event 2</h4>
-        <p>Description 2.</p>
+        <h1>2070s</h1>
+        <p>The world has changed a great deal; technology and society have advanced to a point where human life span has reach an average of 100 years of age.</p>
+        <p>Other events include:</p>
+        <ul>
+          <li> Driving your own car has become a foreign memory to many and is illegal in much of the world</li>
+          <li> The concept of work has changed with autonomous machines having taken over most roles. Humanity as a whole will be focused on more creative and philosophical endeavors. </li>
+          <li> The worldwide population has plateaued at 12billion.</li>
+        </ul>
       </div>
-      <div class="cntl-icon cntl-center">2025</div>
+      <div class="cntl-icon cntl-center">2070</div>
+    </div>
+
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h1>2080s</h1>
+        <p>Androids and humans live in harmony; a ‘modification free’ movement will begin in this decade as the android population has grown to rival the human population in the world. <br> <img class="img-t" src="img/timeline/2080-android.jpg" width="300" height="200"> </p>
+        <p>Other events include:</p>
+        <ul>
+          <li>‘Going to space’ has become as normal as travelling to another country due to advancements in technology.</li>
+          <li> Global warming has snow to be increasingly harder to experience and global efforts are taken to restore snow to sites such as Vancouver, Sochi, Oslo and Chamonix.</li>
+        </ul>
+      </div>
+      <div class="cntl-icon cntl-center">2080</p></div>
     </div> 
-    
-    <div class="cntl-state">
-      <div class="cntl-content">
-        <h4>Event 3</h4>
-        <p>Description 3.</p>
-      </div>
-      <div class="cntl-icon cntl-center">2035</div>
-    </div>
 
     <div class="cntl-state">
       <div class="cntl-content">
-        <h4>Event 3</h4>
-        <p>Description 3.</p>
+        <h1>2090s</h1>
+        <p>The population of earth is heavily populated with humans which have completely merged with machines. </p>
+        <uL>
+          <li>Virtual reality has allowed near perfect simulations of every era of earth. </li>
+          <li>Population on Mars has grown to 2 million. </li>
       </div>
       <div class="cntl-icon cntl-center">2035</div>
     </div>
@@ -251,17 +253,45 @@ $('#page-wrapper').hide();
 </article>
 
 <div id="timeline-three">
+  <div class="cntl">
+  <span class="cntl-bar cntl-center">
+    <span class="cntl-bar-fill"></span>
+  </span>
 
-<video width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
+  <div class="cntl-states">
+
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h1>2100 - Beyond</h1>
+        <p>Humans reach type 1 status on the Kardeshev scale by being able to harness all the energy available from our sun.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1mx-BRJM0sA" frameborder="0" allowfullscreen></iframe>
+        </ul>
+      </div>
+      <div class="cntl-icon cntl-center">2100</div>
+    </div>
+
+    <div class="cntl-state">
+      <div class="cntl-content">
+        <h1>The Deep Future</h1>
+        <p>Humanity pushes limits and pushes past the shackles of earth.</p>
+        <p>Eventually:</p>
+        <ul>
+          <li> Our sun dies but humanity has moved into another dimension of existence. </li>
+          <li> The big crunch - The galaxy reaches it's limits and begins to crunch into what it once was. </li>
+        </ul>
+      </div>
+      <div class="cntl-icon cntl-center">?</div>
+    </div>
+  </div>
+  </div>
 </div>
 
 
+<article>
+<h1> What's in store for you? </h1>
+</article>
 
-<div class="contact-form">
+  </div>
 </div>
 
 
