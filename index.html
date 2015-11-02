@@ -53,6 +53,16 @@ $(document).ready(function(e) { // do not delete this line
     }
 });
 
+  var arr =["<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew"];
+
+    $('.btn-q a').click(function(e) {
+        e.preventDefault(); //needed otherwise page reloads before scrolling
+
+       $('#quote').hide().html(arr[Math.floor((Math.random() * 10)+1)]).fadeIn(800);
+       $('.btn-q a').hide().fadeIn(800)
+  }); 
+
+
 //Plugin dependency
 	$('.cntl').cntl({
 // The amount of "scroll padding" to allow 
@@ -78,7 +88,8 @@ $(document).ready(function(e) { // do not delete this line
 	 <ul id="navbar">
 		  <li class="logo"><a href="">The Future Timeline</a></li>
 		  <li class="scroll"><a href="#timeline-one">Years V</a></li>
-		  <li class="scroll"><a href="">Contact</a></li>
+		  <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="quote.html">Quotes for the future</a></li>
 	 </ul>
 </nav>
@@ -86,17 +97,20 @@ $(document).ready(function(e) { // do not delete this line
 <header>
   <div class="container">
 	   <h1>The future</h1>
-	   <a href="article" class="btn-scroll"><img src="img/arrow.png"></a>
+	   <a href=".section-w" class="btn-scroll"><img src="img/arrow.png"></a>
   </div>
 </header>
 
-<article>
+<section>
+  <div class="section-w">
   <h1> What's in store for humanity? </h1>
   <p> The near future is long and daunting. One could argue that humanity
     no longer has a future considering it's long track record of destruction 
     and war, but this timeline should serve to give an idea of what's to come.</p>
-</article>
+  </div>
+</section>
 
+<article>
 <div id="timeline-one">
   <div class="cntl">
   <span class="cntl-bar cntl-center">
@@ -176,6 +190,7 @@ $(document).ready(function(e) { // do not delete this line
   </div>
 </div>
 </div>
+</article>
 
 <section>
   <div class="container">
@@ -183,6 +198,7 @@ $(document).ready(function(e) { // do not delete this line
 </div>
 </section>
 
+<article>
 <div id="timeline-two">
   <div class="cntl">
   <span class="cntl-bar cntl-center">
@@ -246,12 +262,15 @@ $(document).ready(function(e) { // do not delete this line
   </div>
   </div>
 </div>
-
-<article>
-  <h1> What's next for humanity? </h1>
-  <p> "The further we get, the more we can only speculate"</p>
 </article>
 
+<section>
+<div class="container">
+  <h1>The Deep Future</h1>
+</div>
+</section>
+
+<article>
 <div id="timeline-three">
   <div class="cntl">
   <span class="cntl-bar cntl-center">
@@ -285,18 +304,19 @@ $(document).ready(function(e) { // do not delete this line
   </div>
   </div>
 </div>
-
-
-<article>
-<h1> What's in store for you? </h1>
 </article>
 
+<section>
+    <div class="section-w">
+      <h1> What's next for humanity? </h1>
+      <p> The further we get, the more we can only speculate.</p>
   </div>
-</div>
-
-
-<footer>
-	<p> Andrew Rasheed's Major project MAS241</p>
+</section>
+<footer>  
+  <div id="footer-links">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
 </footer>
 
 </body>

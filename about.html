@@ -25,15 +25,6 @@ $(document).ready(function(e) { // do not delete this line
         $('#logo').css({"font-size" : "22px"});
     }
   });
-
-//This generates the quote
-  var arr =["<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew"];
-
-    $('.btn-q a').click(function(e) {
-	     $('#quote').hide().html(arr[Math.floor((Math.random() * 10)+1)]).fadeIn(800);
-       $('.btn-q a').hide().fadeIn(800)
-  }); 
-
 }); // do not delete this line
 
 </script>
@@ -46,19 +37,18 @@ $(document).ready(function(e) { // do not delete this line
       <li class="logo"><a href="index.html">The Future Timeline</a></li>
       <li class="scroll"><a href="index.html#timeline-one">Years V</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="index.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="quote.html">Quotes for the future</a></li>
 	 </ul>
  </div>
 </nav>
 
-<header>
-  <div class="container">
-	   <h3 id="quote">"If I had a quote, it'd be amazing" <br> - Andrew Rasheed </h3>
-     <div class="btn-q">
-	   <a href="#">Get a quote</a>
-     </div>
+<article>
+ <div id="about-page">
+    <h2> About </h2>
+    <p> This was a project created by Andrew Rasheed for his MAS241 Major Project. The project aims to provide a novel prediction of the future in an interactive, entertaining manner. For enquiries of any nature please proceed to the contact page.
   </div>
-</header>
+</article>
+
 </body>
 </html>
