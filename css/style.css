@@ -225,7 +225,7 @@ footer a:hover {
 	/*header margins need to be adjusted here */
 }
 .navbar li a, #navbar li:visited, #navbar li.active a{ 
-	padding:5px;
+	padding:8px;
 }
 .navbar li{
 	margin:0;
