@@ -10,6 +10,9 @@
 <!-- Timeline plugin dependencies http://www.jqueryscript.net/other/Responsive-Vertical-Timeline-With-jQuery-CSS3.html -->
 <link rel="stylesheet" href="css/cntl.css">
 <script src="js/jquery.cntl.js"></script>
+<!-- SlickNav menu !-->
+<link rel="stylesheet" href="SlickNav/dist/slicknav.min.css" />
+<script src="SlickNav/dist/jquery.slicknav.min.js"></script>
 
 <script>
 
@@ -53,16 +56,6 @@ $(document).ready(function(e) { // do not delete this line
     }
 });
 
-  var arr =["<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew"];
-
-    $('.btn-q a').click(function(e) {
-        e.preventDefault(); //needed otherwise page reloads before scrolling
-
-       $('#quote').hide().html(arr[Math.floor((Math.random() * 10)+1)]).fadeIn(800);
-       $('.btn-q a').hide().fadeIn(800)
-  }); 
-
-
 //Plugin dependency
 	$('.cntl').cntl({
 // The amount of "scroll padding" to allow 
@@ -74,8 +67,7 @@ $(document).ready(function(e) { // do not delete this line
 // A callback once the state has been revealed
 	onreveal: null
 
-});
-
+  });
 
 }); // do not delete this line
 </script>
@@ -83,15 +75,24 @@ $(document).ready(function(e) { // do not delete this line
 <body>
 
 <nav>
-
   <div id="nav-wrapper">
-	 <ul id="navbar">
+	 <ul id="nav-norm" class="navbar">
 		  <li class="logo"><a href="">The Future Timeline</a></li>
 		  <li class="scroll"><a href="#timeline-one">Years V</a></li>
 		  <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="quote.html">Quotes for the future</a></li>
 	 </ul>
+
+  <ul id="ham-navbar" class="navbar">
+      <li class="logo"><a href="">The Future Timeline</a></li>
+      <li class="scroll"><a href="#timeline-one">Years</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="quote.html">Quotes</a></li>
+      </li>
+  </ul>
+
 </nav>
 
 <header>
@@ -122,7 +123,8 @@ $(document).ready(function(e) { // do not delete this line
     <div class="cntl-state">
       <div class="cntl-content">
         <h1>2020s</h1>
-        <p> In the 2020s we will be in a period of large-scale change. We will reach our tipping point in terms of oil and the economy and the world as we know will be forced to begin it’s shift towards renewable energy.</p>
+        <p> In the 2020s we will be in a period of large-scale change. We will reach our tipping point in terms of oil and the economy and the world as we know will be forced to begin it’s shift towards renewable energy. </p>
+        <img src="img/timeline/2020-renewable.jpg" width="300" height="200">
         <p>Other notable events include:</p>
         <ul>
           <li>Self driving cars will begin adoption on a global scale due to a push from well known car manufacturers.</li>
@@ -141,8 +143,9 @@ $(document).ready(function(e) { // do not delete this line
         <p> Other notable changes include: </p>
         <ul>
           <li> A major shift in agriculture has occurred; the way we grow and raise cattle has changed to a more genetically enhanced method to account for population growth.</li>
+          <img src="img/timeline/2030-selfdrive.jpg" width="300" height="200"> 
           <li> Artificial Intelligence is widespread, rather than one centralised AI, countless amounts of small AI effective control their own specialised domains.</li>
-          <li>• The majority of new vehicles are either plug-in electric or hybrids, all of which are self-driven and autonomous. A shift from oil has begun and roads have become a safer place. <br> <img src="img/timeline/2030-cars.jpg" width="300" height="300"> </li>
+          <li> The majority of new vehicles are either plug-in electric or hybrids, all of which are self-driven and autonomous. A shift from oil has begun and roads have become a safer place.</li>
           <li> Emerging job titles of today
               <ul>
                 <li>Social media officer</li>
@@ -164,7 +167,8 @@ $(document).ready(function(e) { // do not delete this line
         <p> Other notable changes include: </p>
         <ul>
           <li> Telecommuting has become a very common method of travelling to work.</li>
-          <li> Virtual currency is now replacing normal currency <br> <img class="img-t" src="img/timeline/2040-money.jpg" width="300" height="200"></li>
+          <li> Virtual currency is now replacing normal currency</li>
+          <img src="img/timeline/2040-money.jpg" width="300" height="200">
           <li> Healthcare has advanced to such an extent where cancer rates and various other forms of disease have dropped dramatically. As a result human life span has increased significantly worldwide to a minimum of 90. </li>
           <li> The worlds animal and plant life have declined as a result of global warming, major extinctions have occurred on many of the world’s species.</li>
         </ul>
@@ -181,6 +185,7 @@ $(document).ready(function(e) { // do not delete this line
           <li> Due to advancements in artifical intelligence, Moores law has allowed the average computer to be as powerful as the entire human population.</li>
           <li> Oil has been completely abandoned in favor of renewable and cleaner energy alternatives.</li>
           <li> Space travel is becoming an increasingly simpler endeavor with humans now occupying mars and the moon.</li>
+          <img src="img/timeline/2050-mars.jpeg" width="300" height="200">
           <li> Food has become free due to advancements in agriculture and technology.</li>
           <li> The capitalistic society in which the world is based is falling apart due to the rapid movement of technology and automation causing a percentage of unemployment (60%).</li>       
         </ul>
@@ -214,6 +219,7 @@ $(document).ready(function(e) { // do not delete this line
         <p>Other events include:</p>
         <ul>
           <li>A shift away from traditional employment has occured due to widespread protest in the 2050s rendering most jobs redundant.</li>
+          <img src="img/timeline/2060-automate.jpg" width="300" height="200">
           <li>Renewable energy is becoming increasingly efficient.</li>
           <li>The Internet has become a virtual world in which a percentage of the population inhabit and live a large amount of their lives.</li>
           <li>Australian population reaches 42million</li>
@@ -225,7 +231,8 @@ $(document).ready(function(e) { // do not delete this line
     <div class="cntl-state">
       <div class="cntl-content">
         <h1>2070s</h1>
-        <p>The world has changed a great deal; technology and society have advanced to a point where human life span has reach an average of 100 years of age.</p>
+        <p>The world has changed a great deal with the population now reaching 12billion; technology and society have advanced to a point where human life span has reach an average of 100 years of age. </p>
+        <img src="img/timeline/2070-age.jpeg" width="350" height="200">
         <p>Other events include:</p>
         <ul>
           <li> Driving your own car has become a foreign memory to many and is illegal in much of the world</li>
@@ -239,7 +246,8 @@ $(document).ready(function(e) { // do not delete this line
     <div class="cntl-state">
       <div class="cntl-content">
         <h1>2080s</h1>
-        <p>Androids and humans live in harmony; a ‘modification free’ movement will begin in this decade as the android population has grown to rival the human population in the world. <br> <img class="img-t" src="img/timeline/2080-android.jpg" width="300" height="200"> </p>
+        <p>Androids and humans live in harmony; a ‘modification free’ movement will begin in this decade as the android population has grown to rival the human population in the world.</p>
+        <img src="img/timeline/2080-android.jpg" width="300" height="200">
         <p>Other events include:</p>
         <ul>
           <li>‘Going to space’ has become as normal as travelling to another country due to advancements in technology.</li>
@@ -252,7 +260,8 @@ $(document).ready(function(e) { // do not delete this line
     <div class="cntl-state">
       <div class="cntl-content">
         <h1>2090s</h1>
-        <p>The population of earth is heavily populated with humans which have completely merged with machines. </p>
+        <p>The population of earth is heavily populated with humans which have completely merged with machines.</p>
+        <img src="img/timeline/2080-futurecity.jpeg" width="300" height="200">
         <uL>
           <li>Virtual reality has allowed near perfect simulations of every era of earth. </li>
           <li>Population on Mars has grown to 2 million. </li>
@@ -283,7 +292,7 @@ $(document).ready(function(e) { // do not delete this line
       <div class="cntl-content">
         <h1>2100 - Beyond</h1>
         <p>Humans reach type 1 status on the Kardeshev scale by being able to harness all the energy available from our sun.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1mx-BRJM0sA" frameborder="0" allowfullscreen></iframe>
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/1mx-BRJM0sA" frameborder="0" allowfullscreen></iframe>
         </ul>
       </div>
       <div class="cntl-icon cntl-center">2100</div>
@@ -295,7 +304,8 @@ $(document).ready(function(e) { // do not delete this line
         <p>Humanity pushes limits and pushes past the shackles of earth.</p>
         <p>Eventually:</p>
         <ul>
-          <li> Our sun dies but humanity has moved into another dimension of existence. </li>
+          <li> Our sun dies but humanity has moved into another dimension of existence.</li>
+          <img src="img/timeline/deepfuture.jpg" width="350" height="200">
           <li> The big crunch - The galaxy reaches it's limits and begins to crunch into what it once was. </li>
         </ul>
       </div>
@@ -312,6 +322,7 @@ $(document).ready(function(e) { // do not delete this line
       <p> The further we get, the more we can only speculate.</p>
   </div>
 </section>
+
 <footer>  
   <div id="footer-links">
     <a href="about.html">About</a>

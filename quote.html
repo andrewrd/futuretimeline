@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="css/style.css">
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,800' rel='stylesheet' type='text/css'>
 <script src="js/jquery-1.11.3.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="img/time-favicon.png"/>
+
 <script>
 
 $(document).ready(function(e) { // do not delete this line
@@ -27,7 +29,7 @@ $(document).ready(function(e) { // do not delete this line
   });
 
 //This generates the quote
-  var arr =["<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew","<q>The future is what we make of it</q><br> - Andrew"];
+  var arr =["<q>Even though the future seems far away, it is actually beginning right now.</q><br> - Mattie Stepanek","<q>You cannot escape the responsibility of tomorrow by evading it today.</q><br> - Abraham Lincoln","<q>Memories are the key not to the past, but to the future.</q><br> - Corrie Ten Boom","<q>Study the past, if you would divine the future.</q><br> - Confucious","<q>Real generosity toward the future lies in giving all to the present.</q><br> - Albert Camus","<q>I look to the future because that's where I'm going to spend the rest of my life.</q><br> - George Burns","<q>Well, the future for me is already a thing of the past.</q><br> - Bob Dylan","<q>The future is always beginning now.</q><br> - Mark Strand","<q>I have no plans, and no plans to plan.</q><br> - Mario Cuomo","<q>Go for it now. The future is promised to no one.</q><br> - Wayne Dyer"];
 
     $('.btn-q a').click(function(e) {
 	     $('#quote').hide().html(arr[Math.floor((Math.random() * 10)+1)]).fadeIn(800);
@@ -42,23 +44,32 @@ $(document).ready(function(e) { // do not delete this line
 
 <nav>
   <div id="nav-wrapper">
-	 <ul id="navbar">
+	 <ul class="navbar">
       <li class="logo"><a href="index.html">The Future Timeline</a></li>
       <li class="scroll"><a href="index.html#timeline-one">Years V</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="index.html">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="quote.html">Quotes for the future</a></li>
 	 </ul>
  </div>
 </nav>
 
-<header>
+<article>
+  <div id="quotes-page">
   <div class="container">
-	   <h3 id="quote">"If I had a quote, it'd be amazing" <br> - Andrew Rasheed </h3>
+	   <h3 id="quote">"Study the past, if you would divine the future." <br> - Confucious </h3>
      <div class="btn-q">
 	   <a href="#">Get a quote</a>
-     </div>
   </div>
-</header>
+</div>
+</article>
+
+<footer>  
+  <div id="footer-links">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
 </body>
 </html>
