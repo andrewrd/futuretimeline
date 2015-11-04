@@ -18,7 +18,7 @@ nav {
 }
 
 .navbar {
-	padding:8px;
+	padding:15px;
 	margin:0;
 	padding-right: 50px;
 }
@@ -63,8 +63,8 @@ header {
 	text-transform: uppercase;
 	font-size: 80px;
 }
-/* Quote button */
 
+/* Quote button */
 .btn-q a{
 	font-size: 30px;
 	background-color: rgba(0,0,0,0.8);
@@ -86,25 +86,24 @@ header {
 	margin-top: 0;
 }
 .btn-scroll img {
-	/*speak with steve regarding best practices regarding the 50%*/
 	border-radius: 50%;
 	width:80px;
 	height:80px;
 	text-align: center;
 	border: solid 3px #FFFFFF;
-	-webkit-transition: all 1s ease; /* Safari and Chrome */
-    -moz-transition: all 1s ease; /* Firefox */
-    -ms-transition: all 1s ease; /* IE 9 */
-    -o-transition: all 1s ease; /* Opera */
+	-webkit-transition: all 1s ease; 
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease; 
     transition: all 1s ease;
 }
 
 .btn-scroll img:hover {
 	color:#0C7DD3;
-	 -webkit-transform:scale(1.25); /* Safari and Chrome */
-    -moz-transform:scale(1.25); /* Firefox */
-    -ms-transform:scale(1.25); /* IE 9 */
-    -o-transform:scale(1.25); /* Opera */
+	 -webkit-transform:scale(1.25); 
+    -moz-transform:scale(1.25);
+    -ms-transform:scale(1.25); 
+    -o-transform:scale(1.25);
      transform:scale(1.25);
 }
 
@@ -222,7 +221,6 @@ footer a:hover {
 .container {
 	font-size:40px;
 	padding:10px;
-	/*header margins need to be adjusted here */
 }
 .navbar li a, #navbar li:visited, #navbar li.active a{ 
 	padding:8px;

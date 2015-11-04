@@ -21,8 +21,8 @@ $(document).ready(function(e) { // do not delete this line
 	$('.container h1').fadeIn(3000)
 
   $('header a').click(function(e) {
-    e.preventDefault(); //needed otherwise page reloads before scrolling
-    var target = $( $(this).attr('href') ).position().top; //gets the position (in pixels) of the target from the top of the page
+    e.preventDefault(); 
+    var target = $( $(this).attr('href') ).position().top; 
     $('html,body').stop().animate({ 
         scrollTop: target 
       }, 
@@ -32,8 +32,8 @@ $(document).ready(function(e) { // do not delete this line
   });
 
   $('.scroll a').click(function(e) {
-    e.preventDefault(); //needed otherwise page reloads before scrolling
-    var ob = $( $(this).attr('href') ).offset().top ; //gets the position (in pixels) of the target from the top of the page
+    e.preventDefault(); 
+    var ob = $( $(this).attr('href') ).offset().top ;
     $('html,body').stop().animate({ 
         scrollTop: ob
       }, 
@@ -181,12 +181,12 @@ $(document).ready(function(e) { // do not delete this line
         <p> In this decade the world population has reached 10billion people. The overpopulation of the world has contributed to advancements in housing, agriculture and become the catylst in society's move away from capitalism. </p>
         <p> Other events include: </p>
         <ul>
-          <li> Due to advancements in artifical intelligence, Moores law has allowed the average computer to be as powerful as the entire human population.</li>
+          <li> Due to advancements in artifical intelligence, Moore's law has allowed the average computer to be as powerful as the entire human population.</li>
           <li> Oil has been completely abandoned in favor of renewable and cleaner energy alternatives.</li>
-          <li> Space travel is becoming an increasingly simpler endeavor with humans now occupying mars and the moon.</li>
+          <li> Space travel is becoming an increasingly simpler endeavour with humans now occupying mars and the moon.</li>
           <img src="img/timeline/2050-mars.jpeg" width="300" height="200">
           <li> Food has become free due to advancements in agriculture and technology.</li>
-          <li> The capitalistic society in which the world is based is falling apart due to the rapid movement of technology and automation causing a percentage of unemployment (60%).</li>       
+          <li> The capitalistic society in which the world is based is falling apart due to the rapid movement of technology and automation causing a high percentage of unemployment (60%).</li>       
         </ul>
       </div>
       <div class="cntl-icon cntl-center">2050</div>
