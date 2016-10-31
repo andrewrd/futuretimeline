@@ -1,5 +1,7 @@
 # futuretimeline
-This was a project created by andrewrd. The project aims to provide a novelty timeline of events in the future.
+This was a project created by andrewrd. The project aims to provide a novelty timeline of events in the future. 
+
+#[Link to live demo](https://andrewrd.github.io/futuretimeline)
 
 The site's features include:
 - Responsive design
