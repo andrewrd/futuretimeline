@@ -168,6 +168,10 @@ header {
   	-o-background-size: cover;
   	background-size: cover;
 }
+
+#quote {
+	font-size:60px;
+}
 section {
 	padding:50px;
 	margin:0 auto;

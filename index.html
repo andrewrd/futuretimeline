@@ -10,10 +10,6 @@
 <!-- Timeline plugin dependencies http://www.jqueryscript.net/other/Responsive-Vertical-Timeline-With-jQuery-CSS3.html -->
 <link rel="stylesheet" href="css/cntl.css">
 <script src="js/jquery.cntl.js"></script>
-<!-- SlickNav menu !-->
-<link rel="stylesheet" href="SlickNav/dist/slicknav.min.css" />
-<script src="SlickNav/dist/jquery.slicknav.min.js"></script>
-
 <script>
 
 $(document).ready(function(e) { // do not delete this line
@@ -21,28 +17,28 @@ $(document).ready(function(e) { // do not delete this line
 	$('.container h1').fadeIn(3000)
 
   $('header a').click(function(e) {
-    e.preventDefault(); 
-    var target = $( $(this).attr('href') ).position().top; 
-    $('html,body').stop().animate({ 
-        scrollTop: target 
-      }, 
-      { 
-        duration: 1000 
+    e.preventDefault();
+    var target = $( $(this).attr('href') ).position().top;
+    $('html,body').stop().animate({
+        scrollTop: target
+      },
+      {
+        duration: 1000
       })
   });
 
   $('.scroll a').click(function(e) {
-    e.preventDefault(); 
+    e.preventDefault();
     var ob = $( $(this).attr('href') ).offset().top ;
-    $('html,body').stop().animate({ 
+    $('html,body').stop().animate({
         scrollTop: ob
-      }, 
-      { 
-        duration: 800 
+      },
+      {
+        duration: 800
       })
   });
 
-// This animates the navigation bar. If the user scrolls below 30px, ab animation is triggered. 
+// This animates the navigation bar. If the user scrolls below 30px, ab animation is triggered.
  $(window).scroll(function(e){
     // here the bar is id'ed myBar
     if ($(this).scrollTop() > 30) { // choose the value you want.
@@ -58,7 +54,7 @@ $(document).ready(function(e) { // do not delete this line
 
 //Plugin dependency
 	$('.cntl').cntl({
-// The amount of "scroll padding" to allow 
+// The amount of "scroll padding" to allow
 // The more, the later the state will be revealed
 	revealbefore: 250,
 // The animate class
@@ -75,7 +71,6 @@ $(document).ready(function(e) { // do not delete this line
 <body>
 
 <nav>
-  <div id="nav-wrapper">
    <ul id="nav-norm" class="navbar">
       <li class="logo"><a href="index.html">The Future Timeline</a></li>
       <li class="scroll"><a href="#timeline-one">Years V</a></li>
@@ -105,7 +100,7 @@ $(document).ready(function(e) { // do not delete this line
   <div class="section-w">
   <h1> What's in store for humanity? </h1>
   <p> The near future is long and daunting. One could argue that humanity
-    no longer has a future considering it's long track record of destruction 
+    no longer has a future considering it's long track record of destruction
     and war, but this timeline should serve to give an idea of what's to come.</p>
   </div>
 </section>
@@ -142,7 +137,7 @@ $(document).ready(function(e) { // do not delete this line
         <p> Other events include: </p>
         <ul>
           <li> A major shift in agriculture has occurred; the way we grow and raise cattle has changed to a more genetically enhanced method to account for population growth.</li>
-          <img src="img/timeline/2030-selfdrive.jpg" width="300" height="200"> 
+          <img src="img/timeline/2030-selfdrive.jpg" width="300" height="200">
           <li> Artificial Intelligence is widespread, rather than one centralised AI, countless amounts of small AI effective control their own specialised domains.</li>
           <li> The majority of new vehicles are either plug-in electric or hybrids, all of which are self-driven and autonomous. A shift from oil has begun and roads have become a safer place.</li>
           <li> Emerging job titles of today
@@ -157,8 +152,8 @@ $(document).ready(function(e) { // do not delete this line
       </div>
 
       <div class="cntl-icon cntl-center">2030</div>
-    </div> 
-    
+    </div>
+
     <div class="cntl-state">
       <div class="cntl-content">
         <h1>2040s</h1>
@@ -186,7 +181,7 @@ $(document).ready(function(e) { // do not delete this line
           <li> Space travel is becoming an increasingly simpler endeavour with humans now occupying mars and the moon.</li>
           <img src="img/timeline/2050-mars.jpeg" width="300" height="200">
           <li> Food has become free due to advancements in agriculture and technology.</li>
-          <li> The capitalistic society in which the world is based is falling apart due to the rapid movement of technology and automation causing a high percentage of unemployment (60%).</li>       
+          <li> The capitalistic society in which the world is based is falling apart due to the rapid movement of technology and automation causing a high percentage of unemployment (60%).</li>
         </ul>
       </div>
       <div class="cntl-icon cntl-center">2050</div>
@@ -254,7 +249,7 @@ $(document).ready(function(e) { // do not delete this line
         </ul>
       </div>
       <div class="cntl-icon cntl-center">2080</p></div>
-    </div> 
+    </div>
 
     <div class="cntl-state">
       <div class="cntl-content">
@@ -322,7 +317,7 @@ $(document).ready(function(e) { // do not delete this line
   </div>
 </section>
 
-<footer>  
+<footer>
   <div id="footer-links">
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
